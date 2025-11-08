@@ -52,26 +52,6 @@ A containerized data pipeline for fetching and storing stock market data, deploy
 - Reproducible infrastructure
 - Multi-environment support
 
-## Architecture
-
-```
-┌─────────────┐
-│   FMP API   │
-└──────┬──────┘
-       │
-       v
-┌─────────────────┐
-│  Docker         │
-│  Container      │
-│  (Python App)   │
-└────────┬────────┘
-         │
-         v
-┌─────────────────┐
-│   PostgreSQL    │
-│   (AWS RDS)     │
-└─────────────────┘
-```
 
 ## Technology Stack
 
@@ -80,9 +60,3 @@ A containerized data pipeline for fetching and storing stock market data, deploy
 - **Containerization**: Docker
 - **Cloud Platform**: AWS (EC2, ECS, ECR, RDS, CloudWatch)
 - **IaC**: Terraform (planned)
-
-## Project Timeline
-
-- Week 1: Docker + EC2
-- Week 2: ECS + Monitoring
-- Week 3: IaC + Documentation
