@@ -42,10 +42,6 @@ Built a production-ready data pipeline that fetches real-time intraday stock mar
 - **Security**: AWS IAM, VPC, Security Groups
 - **Networking**: AWS VPC with public subnets
 
-### Deployment Evolution
-
-I deployed this project in three phases to understand different cloud deployment strategies:
-
 **Phase 1: Local Development**
 ```
 Docker Container (Local Laptop) → AWS RDS
@@ -69,30 +65,6 @@ AWS ECS Fargate → AWS RDS
 - Serverless container orchestration
 - Automatic scaling and infrastructure management
 - Production-grade deployment
-
-## Database Schema
-
-**Key Design Decisions:**
-- `UNIQUE(ticker, timestamp)` constraint ensures no duplicate market data
-- `TIMESTAMP WITH TIME ZONE` for accurate time handling across regions
-- `NUMERIC` type for precise financial calculations (avoids floating-point errors)
-- `created_at` timestamp tracks when data was inserted
-
-## Future Enhancements
-
-**Immediate Next Steps:**
-- [ ] **Automated Scheduling**: Implement AWS EventBridge to trigger daily data refreshes automatically
-- [ ] **CloudWatch Alarms**: Set up alerts for task failures, API errors, or database connection issues
-- [ ] **Enhanced Error Handling**: Add exponential backoff retry logic for API rate limiting
-
-**Long-term Improvements:**
-- [ ] **Infrastructure as Code**: Implement Terraform to define all AWS resources as code
-- [ ] **CI/CD Pipeline**: GitHub Actions workflow for automated testing and deployment
-- [ ] **API Gateway**: Create REST API layer for querying stored market data
-- [ ] **Data Analytics Dashboard**: Build visualization dashboard using Grafana or QuickSight
-- [ ] **Multi-Region Deployment**: Expand to multiple AWS regions for redundancy
-
-## Performance Metrics
 
 **Data Insertion Performance:**
 - EC2 Deployment: 71,679 rows inserted
