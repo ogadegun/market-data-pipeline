@@ -18,7 +18,7 @@ Built a production-ready data pipeline that fetches real-time intraday stock mar
 - **Data Integrity**: Unique constraints prevent duplicate entries
 - **Error Handling**: Comprehensive retry logic and timeout handling for API reliability
 
-## 📊 Key Metrics
+## Key Metrics
 
 - **86,095 rows** of market data stored in production database
 - **50 stock tickers** tracked (AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA, and more)
@@ -26,7 +26,7 @@ Built a production-ready data pipeline that fetches real-time intraday stock mar
 - **~344 data points** per ticker per day (1-minute intervals during market hours)
 - **100% data integrity** with unique constraints preventing duplicates
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 **Application Layer:**
 - Python 3.10
